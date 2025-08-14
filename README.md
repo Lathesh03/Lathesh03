@@ -26,16 +26,6 @@ Other Tools/Concepts: Data Architecture fundamentals
 🚀 Projects I'm proud of:
 Here are a few projects that showcase my skills and learning journey. I've selected some from your current profile and suggested a new one to align with your cloud/DevOps goals:
 
-Data Analysis and Visualization using Python
-
-Description: Explored various datasets to perform data cleaning, analysis, and create insightful visualizations using Python libraries.
-
-Technologies Used: Python (Pandas, Matplotlib, Seaborn)
-
-Key Learning: Data manipulation, statistical analysis, and effective data presentation.
-
-Link to Data-Analysis-and-Visualization-using-Python Repository
-
 Mini Project on DBMS
 
 Description: A project demonstrating fundamental Database Management System concepts, including schema design and basic operations.
