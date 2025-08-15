@@ -1,79 +1,40 @@
-Hi there, I'm Lathesh 👋
-I'm an aspiring Cloud DevOps Engineer, Database Administrator, and Python Developer passionate about building robust, scalable, and automated systems. I'm currently on a journey to deepen my expertise in cloud technologies, efficient data management, and practical programming solutions.
+Hi there 👋 I'm Lathesh Neikar Krishnappa Harish!
 
-🌱 I'm currently learning:
-Cloud (AWS): Diving into AWS services like EC2, S3, IAM, Lambda, and exploring Infrastructure as Code (IaC) with tools like Terraform.
+ 💻 About Me
 
-DevOps Principles: Focusing on CI/CD pipelines, automation, monitoring, and version control best practices.
+I'm an aspiring Cloud DevOps Engineer, Python Developer, and Database Enthusiast with a strong passion for technology and automation. I'm currently focused on expanding my skills in cloud computing and DevOps principles to build scalable and efficient systems.
 
-Database Administration: Learning advanced SQL, database optimization, backup/recovery strategies, and security for relational databases like PostgreSQL and MySQL.
+My current learning journey includes:
+* Diving deep into AWS services.
+* Mastering DevOps practices like CI/CD and automation.
+* Strengthening my skills in Python programming and PostgreSQL administration.
 
-Python: Strengthening my Python skills through hands-on projects, focusing on scripting for automation, data processing, and web development fundamentals.
+ 🛠️ My Tech Stack
 
-🛠️ My Tech Stack:
-Languages: Python (Beginner/Intermediate), SQL, C++
+| Category         | Technologies & Tools                                           |
+| ---------------- | -------------------------------------------------------------- |
+| Languages | Python, SQL, C++                                               |
+| Cloud | AWS (currently learning)                                       |
+| DevOps | Git, GitHub Actions                                            |
+| Databases | MySQL, PostgreSQL                                              |
+| Project Mgmt | Trello, Jira                                                   |
 
-Cloud Platforms: AWS (Learning)
+---
 
-DevOps Tools: Git, GitHub Actions (Learning), Docker (Learning)
+ 🚀 Projects
 
-Databases: MySQL, PostgreSQL (Learning Administration)
+Here are some of the projects I'm working on. I'm excited to complete these and add the links to the finished repositories!
 
-Project Management/Collaboration: Trello, Jira
+* Data Analysis and Visualization using Python: A project focused on using Python libraries to analyze and visualize data.
+* Mini Project on DBMS: A project demonstrating fundamental database management system concepts.
+* Python Projects for Beginners: A collection of small-scale Python applications.
+* Simple AWS Web App Deployment: A project to deploy a basic web application on AWS, using various cloud services.
 
-Other Tools/Concepts: Data Architecture fundamentals
+---
 
-🚀 Projects I'm proud of:
-Here are a few projects that showcase my skills and learning journey. I've selected some from your current profile and suggested a new one to align with your cloud/DevOps goals:
+ 🤝 Let's Connect!
 
-Mini Project on DBMS
+I'm always open to connecting with fellow developers and learning from others. Feel free to reach out!
 
-Description: A project demonstrating fundamental Database Management System concepts, including schema design and basic operations.
-
-Technologies Used: (Specify the database used, e.g., MySQL, SQL)
-
-Key Learning: Database modeling, querying, and understanding relational database principles.
-
-Link to Mini-Project-on-DBMS Repository
-
-Python Projects for Beginners
-
-Description: A collection of beginner-friendly Python projects, perfect for practicing core programming concepts and building foundational skills.
-
-Technologies Used: Python
-
-Key Learning: Basic Python syntax, control flow, functions, and problem-solving.
-
-Link to Python-Projects-for-Beginners Repository
-
-[Suggested New Project: Simple AWS Web App Deployment]
-
-Description: (Once created) A basic web application deployed to AWS using foundational cloud services and automated with a CI/CD pipeline.
-
-Technologies Used: Python (Flask/Django), AWS EC2, AWS S3, GitHub Actions, Docker, Terraform (optional)
-
-Key Learning: Cloud deployment, CI/CD pipeline setup, basic infrastructure as code.
-
-[Link to New Project Repository (e.g., aws-flask-deploy)]
-
-🌐 Connect with me:
-LinkedIn: https://www.linkedin.com/in/lneikar/
-
-Email: lathesh.neikar@gmail.com
-
-📈 GitHub Stats:## Hi there 👋
-
-<!--
-**Lathesh03/Lathesh03** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+* LinkedIn: https://www.linkedin.com/in/lneikar/
+* Email: lathesh.neikar@gmail.com
