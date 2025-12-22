@@ -24,8 +24,6 @@ My current learning journey includes:
  🚀 Projects
 
 Here are some of the projects I'm working on. I'm excited to complete these and add the links to the finished repositories!
-
-* Data Analysis and Visualization using Python: A project focused on using Python libraries to analyze and visualize data.
 * Mini Project on DBMS: A project demonstrating fundamental database management system concepts.
 * Python Projects for Beginners: A collection of small-scale Python applications.
 * Simple AWS Web App Deployment: A project to deploy a basic web application on AWS, using various cloud services.
