@@ -29,14 +29,34 @@ Databases & Tools
 
 Featured Projects
 
-- **[aws-facededectionapp](https://github.com/Lathesh03/aws-facededectionapp)**: A cloud-based face detection application leveraging AWS services.
-- **[nextwork-web-project](https://github.com/Lathesh03/nextwork-web-project)**: Java web application deployed and configured on an AWS EC2 instance.
-- **Python Projects**: A collection of scripts and tools demonstrating Python automation and logic.
+- **[musical-spoon](https://github.com/Lathesh03/musical-spoon)**
+  <br>
+  My latest project focusing on **automation and infrastructure**. (Feel free to edit this description to match the actual code!)
+
+- **[flask-cicd-app](https://github.com/Lathesh03/flask-cicd-app)**
+  <br>
+  A Python Flask application demonstrating a complete **CI/CD pipeline** using **GitHub Actions** for automated testing and deployment.
+
+- **[aws-facededectionapp](https://github.com/Lathesh03/aws-facededectionapp)**
+  <br>
+  A cloud-native face detection system leveraging **AWS Rekognition** and **S3** to analyze uploaded images.
+
+- **[nextwork-web-project](https://github.com/Lathesh03/nextwork-web-project)**
+  <br>
+  A Java-based web application configured and deployed on an **AWS EC2** instance, demonstrating cloud infrastructure skills.
 
 ---
 
-Achievements
-[![trophy](https://github-profile-trophy.vercel.app/?username=Lathesh03&theme=flat&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Lathesh03&show_icons=true&theme=radical&hide_border=true" height="180" alt="stats" />
+  <img src="https://streak-stats.demolab.com?user=Lathesh03&theme=radical&hide_border=true" height="180" alt="streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lathesh03&layout=compact&theme=radical&hide_border=true" height="180" alt="languages" />
+</div>
 
 ---
 
