@@ -35,10 +35,8 @@ I am a passionate tech enthusiast focused on **Cloud Computing**, **DevOps**, an
 
 ---
 
-### 📊 GitHub Stats
-
-![Lathesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Lathesh03&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lathesh03&layout=compact&theme=radical)
+### 🏆 Achievements
+[![trophy](https://github-profile-trophy.vercel.app/?username=Lathesh03&theme=flat&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 ---
 
