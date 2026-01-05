@@ -1,12 +1,12 @@
-# Hi there, I'm Lathesh! 👋
+ Hi there, I'm Lathesh! 
 
-### ☁️ Aspiring Cloud DevOps Engineer | 🐍 Python Developer | 🗄️ Database Enthusiast
+Aspiring Cloud DevOps Engineer |  Python Developer |  Database Enthusiast
 
 I am a passionate tech enthusiast focused on **Cloud Computing**, **DevOps**, and **Automation**. I am currently building my expertise in AWS services and mastering CI/CD pipelines to create scalable, efficient systems.
 
 ---
 
-### 🛠️ Technologies & Tools
+🛠️ Technologies & Tools
 
 **Cloud & DevOps**
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -14,20 +14,20 @@ I am a passionate tech enthusiast focused on **Cloud Computing**, **DevOps**, an
 ![Git](https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 
-**Languages**
+Languages
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![SQL](https://img.shields.io/badge/sql-%23003B57.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-**Databases & Tools**
+Databases & Tools
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
 
 ---
 
-### 🚀 Featured Projects
+Featured Projects
 
 - **[aws-facededectionapp](https://github.com/Lathesh03/aws-facededectionapp)**: A cloud-based face detection application leveraging AWS services.
 - **[nextwork-web-project](https://github.com/Lathesh03/nextwork-web-project)**: Java web application deployed and configured on an AWS EC2 instance.
@@ -35,12 +35,12 @@ I am a passionate tech enthusiast focused on **Cloud Computing**, **DevOps**, an
 
 ---
 
-### 🏆 Achievements
+Achievements
 [![trophy](https://github-profile-trophy.vercel.app/?username=Lathesh03&theme=flat&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 ---
 
-### 🤝 Let's Connect
+🤝 Let's Connect
 
 <p align="left">
 <a href="https://www.linkedin.com/in/lneikar/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="lneikar" /></a>
