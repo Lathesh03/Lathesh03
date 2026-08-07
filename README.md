@@ -50,7 +50,6 @@ Featured Projects
 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Lathesh03&show_icons=true&theme=radical&hide_border=true" height="180" alt="stats" />
   <img src="https://streak-stats.demolab.com?user=Lathesh03&theme=radical&hide_border=true" height="180" alt="streak" />
 </div>
 
