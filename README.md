@@ -54,10 +54,6 @@ GitHub Stats
   <img src="https://streak-stats.demolab.com?user=Lathesh03&theme=radical&hide_border=true" height="180" alt="streak" />
 </div>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lathesh03&layout=compact&theme=radical&hide_border=true" height="180" alt="languages" />
-</div>
-
 ---
 
 Let's Connect
