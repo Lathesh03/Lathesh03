@@ -50,7 +50,7 @@ Featured Projects
 GitHub Stats
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=Lathesh03&theme=radical&hide_border=true" height="180" alt="streak" />
+  <img src="https://streak-stats.demolab.com/?user=Lathesh03&theme=radical&hide_border=true" height="180" alt="streak" />
 </div>
 
 ---
