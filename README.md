@@ -52,7 +52,7 @@ GitHub Stats
 <div align="center">
       <img src="https://github-readme-stats-hazel-five-87.vercel.app/api?username=Lathesh03&show_icons=true&theme=radical&hide_border=true" height="180" alt="stats" />
     <img src="https://github-readme-stats-hazel-five-87.vercel.app/api/top-langs/?username=Lathesh03&layout=compact&theme=radical&hide_border=true" height="180" alt="top languages" />
-    <img src="https://streak-stats.demolab.com/?user=Lathesh03&theme=radical&hide_border=true&v=20260818" height="180" alt="streak" />
+    <img src="https://streak-stats.demolab.com/?user=Lathesh03&theme=radical&hide_border=true&v=1787021341" height="180" alt="streak" />
 </div>
 
 ---
