@@ -16,7 +16,7 @@ jobs:
 
       - name: Bump cache-buster on streak stats image
         run: |
-          STAMP=$(date +%Y%m%d)
+          STAMP=$(date +%s)
           sed -i -E "s#(streak-stats\.demolab\.com/[^\"]*v=)[0-9]+#\1${STAMP}#" README.md
 
       - name: Commit changes
