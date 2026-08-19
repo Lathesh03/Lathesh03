@@ -28,12 +28,30 @@ jobs:
           RESP=$(curl -s -H "Authorization: bearer $GH_TOKEN" -H "Content-Type: application/json" -d "$BODY" https://api.github.com/graphql)
           TOTAL=$(echo "$RESP" | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
           echo "$RESP" | jq -r '.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | "\(.date) \(.contributionCount)"' | sort > days.txt
+          fmt_date() {
+            D=$(date -d "$1" +%-d)
+            case $D in
+              1|21|31) S="st" ;;
+              2|22) S="nd" ;;
+              3|23) S="rd" ;;
+              *) S="th" ;;
+            esac
+            date -d "$1" +"%b $D$S, %Y"
+          }
           LONGEST=0
           RUN=0
+          RUN_START=""
+          LONGEST_START=""
+          LONGEST_END=""
           while read -r DATE COUNT; do
             if [ "$COUNT" -gt 0 ]; then
+              if [ "$RUN" -eq 0 ]; then RUN_START="$DATE"; fi
               RUN=$((RUN+1))
-              if [ "$RUN" -gt "$LONGEST" ]; then LONGEST=$RUN; fi
+              if [ "$RUN" -gt "$LONGEST" ]; then
+                LONGEST=$RUN
+                LONGEST_START="$RUN_START"
+                LONGEST_END="$DATE"
+              fi
             else
               RUN=0
             fi
@@ -44,28 +62,35 @@ jobs:
           if [ -z "$TODAY_COUNT" ] || [ "$TODAY_COUNT" -eq 0 ]; then
             CURSOR=$(date -d "$TODAY -1 day" +%Y-%m-%d)
           fi
+          CURRENT_END="$CURSOR"
+          CURRENT_START="$CURSOR"
           while true; do
             C=$(grep "^$CURSOR " days.txt | awk '{print $2}')
             if [ -n "$C" ] && [ "$C" -gt 0 ]; then
               CURRENT=$((CURRENT+1))
+              CURRENT_START="$CURSOR"
               CURSOR=$(date -d "$CURSOR -1 day" +%Y-%m-%d)
             else
               break
             fi
           done
+          CURRENT_RANGE="$(fmt_date "$CURRENT_START") to $(fmt_date "$CURRENT_END")"
+          LONGEST_RANGE="$(fmt_date "$LONGEST_START") to $(fmt_date "$LONGEST_END")"
           cat > streak.svg <<SVGEOF
-          <svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
-          <rect width="494" height="194" x="0.5" y="0.5" rx="4.5" fill="#141321" stroke="#e4e2e2" stroke-opacity="0.15"/>
+          <svg width="495" height="220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="494" height="219" x="0.5" y="0.5" rx="4.5" fill="#141321" stroke="#e4e2e2" stroke-opacity="0.15"/>
           <text x="247" y="30" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="600" fill="#a9fef7">${LOGIN}'s GitHub Streak</text>
           <text x="85" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${TOTAL}</text>
           <text x="85" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Total Contributions</text>
           <text x="247" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${CURRENT}</text>
           <text x="247" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Current Streak</text>
+          <text x="247" y="153" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a9fef7">${CURRENT_RANGE}</text>
           <text x="410" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${LONGEST}</text>
           <text x="410" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Longest Streak</text>
+          <text x="410" y="153" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a9fef7">${LONGEST_RANGE}</text>
           </svg>
           SVGEOF
-          echo "total=$TOTAL current=$CURRENT longest=$LONGEST"
+          echo "total=$TOTAL current=$CURRENT ($CURRENT_RANGE) longest=$LONGEST ($LONGEST_RANGE)"
 
       - name: Commit changes
         run: |
