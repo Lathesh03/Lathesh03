@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -14,18 +15,57 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch streak stats SVG
+      - name: Generate streak SVG from GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          URL="https://streak-stats.demolab.com/?user=Lathesh03&theme=radical&hide_border=true"
-          for i in 1 2 3 4 5 6; do
-            if curl -sf "$URL" -o streak.svg.tmp && grep -q "<svg" streak.svg.tmp && ! grep -qi "Failed to retrieve" streak.svg.tmp; then
-              mv streak.svg.tmp streak.svg
-              echo "Streak stats OK on attempt $i"
+          LOGIN="Lathesh03"
+          NOW=$(TZ="America/New_York" date +%Y-%m-%dT%H:%M:%S%:z)
+          FROM=$(TZ="America/New_York" date -d "364 days ago" +%Y-%m-%dT%H:%M:%S%:z)
+          TODAY=$(TZ="America/New_York" date +%Y-%m-%d)
+          QUERY='query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){contributionsCollection(from:$from,to:$to){contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}'
+          BODY=$(jq -n --arg q "$QUERY" --arg login "$LOGIN" --arg from "$FROM" --arg to "$NOW" '{query:$q,variables:{login:$login,from:$from,to:$to}}')
+          RESP=$(curl -s -H "Authorization: bearer $GH_TOKEN" -H "Content-Type: application/json" -d "$BODY" https://api.github.com/graphql)
+          TOTAL=$(echo "$RESP" | jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+          echo "$RESP" | jq -r '.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | "\(.date) \(.contributionCount)"' | sort > days.txt
+          LONGEST=0
+          RUN=0
+          while read -r DATE COUNT; do
+            if [ "$COUNT" -gt 0 ]; then
+              RUN=$((RUN+1))
+              if [ "$RUN" -gt "$LONGEST" ]; then LONGEST=$RUN; fi
+            else
+              RUN=0
+            fi
+          done < days.txt
+          CURRENT=0
+          CURSOR="$TODAY"
+          TODAY_COUNT=$(grep "^$TODAY " days.txt | awk '{print $2}')
+          if [ -z "$TODAY_COUNT" ] || [ "$TODAY_COUNT" -eq 0 ]; then
+            CURSOR=$(date -d "$TODAY -1 day" +%Y-%m-%d)
+          fi
+          while true; do
+            C=$(grep "^$CURSOR " days.txt | awk '{print $2}')
+            if [ -n "$C" ] && [ "$C" -gt 0 ]; then
+              CURRENT=$((CURRENT+1))
+              CURSOR=$(date -d "$CURSOR -1 day" +%Y-%m-%d)
+            else
               break
             fi
-            echo "Attempt $i failed, retrying in 15s..."
-            sleep 15
           done
+          cat > streak.svg <<SVGEOF
+          <svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
+          <rect width="494" height="194" x="0.5" y="0.5" rx="4.5" fill="#141321" stroke="#e4e2e2" stroke-opacity="0.15"/>
+          <text x="247" y="30" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="600" fill="#a9fef7">${LOGIN}'s GitHub Streak</text>
+          <text x="85" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${TOTAL}</text>
+          <text x="85" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Total Contributions</text>
+          <text x="247" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${CURRENT}</text>
+          <text x="247" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Current Streak</text>
+          <text x="410" y="105" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#fe428e">${LONGEST}</text>
+          <text x="410" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#a9fef7">Longest Streak</text>
+          </svg>
+          SVGEOF
+          echo "total=$TOTAL current=$CURRENT longest=$LONGEST"
 
       - name: Commit changes
         run: |
